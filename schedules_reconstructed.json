@@ -1,0 +1,1457 @@
+{
+    "div1": {
+        "E1": {
+            "Monday": {
+                "11:10-12:05": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "E309",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E004",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E004",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                },
+                "16:15-17:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E004",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                },
+                "17:15-18:10": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E004",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                }
+            },
+            "Tuesday": {
+                "10:00-10:55": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "E101",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E004",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E004",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                },
+                "16:15-17:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E004",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                }
+            },
+            "Wednesday": {
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "\u2014",
+                    "prof": "\u2014",
+                    "type": "cre"
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "\u2014",
+                    "prof": "\u2014",
+                    "type": "mto"
+                },
+                "16:15-17:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "\u2014",
+                    "prof": "\u2014",
+                    "type": "ped"
+                },
+                "09:00-09:55": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "PRKU-P + MSI-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                },
+                "10:00-10:55": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "PRKU-P + MSI-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                }
+            },
+            "Thursday": {
+                "13:10-14:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E004",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "14:10-15:05": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E311",
+                    "prof": "AYD-P + SMIT-P",
+                    "type": "ped-lab",
+                    "isLab": true
+                },
+                "15:10-16:05": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E311",
+                    "prof": "AYD-P + SMIT-P",
+                    "type": "ped-lab",
+                    "isLab": true
+                }
+            },
+            "Friday": {
+                "09:00-09:55": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "JAJ-P + ASU-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                },
+                "10:00-10:55": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "JAJ-P + ASU-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                },
+                "13:10-14:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E004",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                }
+            }
+        },
+        "E2": {
+            "Monday": {
+                "11:10-12:05": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "E309",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E004",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E004",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                },
+                "16:15-17:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E004",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                },
+                "17:15-18:10": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E004",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                }
+            },
+            "Tuesday": {
+                "10:00-10:55": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "E101",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E004",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E004",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                },
+                "16:15-17:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E004",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                }
+            },
+            "Wednesday": {
+                "09:00-09:55": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "JAJ-P + ASU-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                },
+                "10:00-10:55": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "JAJ-P + ASU-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "\u2014",
+                    "prof": "\u2014",
+                    "type": "cre"
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "\u2014",
+                    "prof": "\u2014",
+                    "type": "mto"
+                },
+                "16:15-17:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "\u2014",
+                    "prof": "\u2014",
+                    "type": "ped"
+                }
+            },
+            "Thursday": {
+                "13:10-14:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E004",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "14:10-15:05": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E311",
+                    "prof": "AYD-P + SMIT-P",
+                    "type": "ped-lab",
+                    "isLab": true
+                },
+                "15:10-16:05": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E311",
+                    "prof": "AYD-P + SMIT-P",
+                    "type": "ped-lab",
+                    "isLab": true
+                },
+                "09:00-09:55": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "PRKU-P + MSI-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                },
+                "10:00-10:55": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "PRKU-P + MSI-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                }
+            },
+            "Friday": {
+                "13:10-14:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E004",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                }
+            }
+        },
+        "E3": {
+            "Monday": {
+                "11:10-12:05": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "E309",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E004",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E004",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                },
+                "16:15-17:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E004",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                },
+                "17:15-18:10": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E004",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                }
+            },
+            "Tuesday": {
+                "10:00-10:55": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "E101",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E004",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E004",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                },
+                "16:15-17:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E004",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                }
+            },
+            "Wednesday": {
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "\u2014",
+                    "prof": "\u2014",
+                    "type": "cre"
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "\u2014",
+                    "prof": "\u2014",
+                    "type": "mto"
+                },
+                "16:15-17:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "\u2014",
+                    "prof": "\u2014",
+                    "type": "ped"
+                }
+            },
+            "Thursday": {
+                "09:00-09:55": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "JAJ-P + ASU-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                },
+                "10:00-10:55": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "JAJ-P + ASU-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                },
+                "13:10-14:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E004",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                }
+            },
+            "Friday": {
+                "13:10-14:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E004",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "14:10-15:05": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E216",
+                    "prof": "AYD-P + ABY-P",
+                    "type": "ped-lab",
+                    "isLab": true
+                },
+                "15:10-16:05": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E216",
+                    "prof": "AYD-P + ABY-P",
+                    "type": "ped-lab",
+                    "isLab": true
+                },
+                "09:00-09:55": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "PRKU-P + MSI-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                },
+                "10:00-10:55": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "PRKU-P + MSI-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                }
+            }
+        }
+    },
+    "div2": {
+        "E4": {
+            "Monday": {
+                "09:00-09:55": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "MNS-P + PRKU-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                },
+                "10:00-10:55": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "MNS-P + PRKU-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                },
+                "11:10-12:05": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "F1-203",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E005",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "15:10-16:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E005",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "16:15-17:10": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E310",
+                    "prof": "UDA-L",
+                    "type": "mto"
+                }
+            },
+            "Tuesday": {
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E005",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "15:10-16:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E005",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "16:15-17:10": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E310",
+                    "prof": "UDA-L",
+                    "type": "mto"
+                }
+            },
+            "Wednesday": {
+                "09:00-09:55": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E101",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                },
+                "11:10-12:05": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "F1-203",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E311",
+                    "prof": "SMIT-P + AYD-P",
+                    "type": "ped-lab",
+                    "isLab": true
+                },
+                "15:10-16:05": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E311",
+                    "prof": "SMIT-P + AYD-P",
+                    "type": "ped-lab",
+                    "isLab": true
+                }
+            },
+            "Thursday": {
+                "13:10-14:05": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E005",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                },
+                "14:10-15:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E004",
+                    "prof": "UDA-L",
+                    "type": "mto"
+                },
+                "15:10-16:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E004",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "16:15-17:10": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E004",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                }
+            },
+            "Friday": {
+                "13:10-14:05": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E005",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                },
+                "14:10-15:05": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "JAJ-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                },
+                "15:10-16:05": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "JAJ-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                }
+            }
+        },
+        "E5": {
+            "Monday": {
+                "11:10-12:05": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "F1-203",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E005",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "15:10-16:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E005",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "16:15-17:10": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E310",
+                    "prof": "UDA-L",
+                    "type": "mto"
+                },
+                "09:00-09:55": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "JAJ-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                },
+                "10:00-10:55": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "JAJ-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                }
+            },
+            "Tuesday": {
+                "09:00-09:55": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "MNS-P + PRKU-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                },
+                "10:00-10:55": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "MNS-P + PRKU-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E005",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "15:10-16:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E005",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "16:15-17:10": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E310",
+                    "prof": "UDA-L",
+                    "type": "mto"
+                }
+            },
+            "Wednesday": {
+                "09:00-09:55": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E101",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                },
+                "11:10-12:05": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "F1-203",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E311",
+                    "prof": "SMIT-P + AYD-P",
+                    "type": "ped-lab",
+                    "isLab": true
+                },
+                "15:10-16:05": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E311",
+                    "prof": "SMIT-P + AYD-P",
+                    "type": "ped-lab",
+                    "isLab": true
+                }
+            },
+            "Thursday": {
+                "13:10-14:05": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E005",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                },
+                "14:10-15:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E004",
+                    "prof": "UDA-L",
+                    "type": "mto"
+                },
+                "15:10-16:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E004",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "16:15-17:10": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E004",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                }
+            },
+            "Friday": {
+                "13:10-14:05": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E005",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                }
+            }
+        },
+        "E6": {
+            "Monday": {
+                "11:10-12:05": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "F1-203",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E005",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "15:10-16:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E005",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "16:15-17:10": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E310",
+                    "prof": "UDA-L",
+                    "type": "mto"
+                }
+            },
+            "Tuesday": {
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E005",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "15:10-16:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E005",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "16:15-17:10": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E310",
+                    "prof": "UDA-L",
+                    "type": "mto"
+                },
+                "09:00-09:55": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "JAJ-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                },
+                "10:00-10:55": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "JAJ-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                }
+            },
+            "Wednesday": {
+                "09:00-09:55": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E101",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                },
+                "11:10-12:05": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "F1-203",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "16:15-17:10": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E307",
+                    "prof": "SMIT-P + AYD-P",
+                    "type": "ped-lab",
+                    "isLab": true
+                },
+                "17:15-18:10": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E307",
+                    "prof": "SMIT-P + AYD-P",
+                    "type": "ped-lab",
+                    "isLab": true
+                }
+            },
+            "Thursday": {
+                "13:10-14:05": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E005",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                },
+                "14:10-15:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E004",
+                    "prof": "UDA-L",
+                    "type": "mto"
+                },
+                "15:10-16:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E004",
+                    "prof": "ASU-L",
+                    "type": "cre"
+                },
+                "16:15-17:10": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E004",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                }
+            },
+            "Friday": {
+                "13:10-14:05": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E005",
+                    "prof": "HIC-L",
+                    "type": "ped"
+                },
+                "14:10-15:05": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "MNS-P + PRKU-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "MNS-P + PRKU-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                }
+            }
+        }
+    },
+    "div3": {
+        "E7": {
+            "Monday": {
+                "10:00-10:55": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E101",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "UDA-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "UDA-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                },
+                "16:15-17:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E102",
+                    "prof": "ABY-L",
+                    "type": "ped"
+                }
+            },
+            "Tuesday": {
+                "10:00-10:55": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E313",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                },
+                "11:10-12:05": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "E312",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "16:15-17:10": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E102",
+                    "prof": "JAJ-L",
+                    "type": "cre"
+                },
+                "17:15-18:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E102",
+                    "prof": "ABY-L",
+                    "type": "ped"
+                }
+            },
+            "Wednesday": {
+                "10:00-10:55": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E101",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "16:15-17:10": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E101",
+                    "prof": "ABY-L",
+                    "type": "ped-lab",
+                    "isLab": true
+                },
+                "17:15-18:10": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E101",
+                    "prof": "ABY-L",
+                    "type": "ped-lab",
+                    "isLab": true
+                },
+                "14:10-15:05": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "HIC-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                },
+                "15:10-16:05": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "HIC-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                }
+            },
+            "Thursday": {
+                "10:00-10:55": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "E310",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E101",
+                    "prof": "JAJ-L",
+                    "type": "cre"
+                },
+                "14:10-15:05": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E005",
+                    "prof": "ABY-L",
+                    "type": "ped"
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E005",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                }
+            },
+            "Friday": {
+                "13:10-14:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E101",
+                    "prof": "JAJ-L",
+                    "type": "cre"
+                },
+                "14:10-15:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E101",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                },
+                "15:10-16:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E101",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                }
+            }
+        },
+        "E8": {
+            "Monday": {
+                "10:00-10:55": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E101",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "16:15-17:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E102",
+                    "prof": "ABY-L",
+                    "type": "ped"
+                },
+                "14:10-15:05": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "HIC-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                },
+                "15:10-16:05": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "HIC-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                }
+            },
+            "Tuesday": {
+                "10:00-10:55": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E313",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                },
+                "11:10-12:05": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "E312",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "UDA-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "UDA-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                },
+                "16:15-17:10": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E102",
+                    "prof": "JAJ-L",
+                    "type": "cre"
+                },
+                "17:15-18:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E102",
+                    "prof": "ABY-L",
+                    "type": "ped"
+                }
+            },
+            "Wednesday": {
+                "10:00-10:55": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E101",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "16:15-17:10": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E101",
+                    "prof": "ABY-L",
+                    "type": "ped-lab",
+                    "isLab": true
+                },
+                "17:15-18:10": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E101",
+                    "prof": "ABY-L",
+                    "type": "ped-lab",
+                    "isLab": true
+                }
+            },
+            "Thursday": {
+                "10:00-10:55": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "E310",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E101",
+                    "prof": "JAJ-L",
+                    "type": "cre"
+                },
+                "14:10-15:05": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E005",
+                    "prof": "ABY-L",
+                    "type": "ped"
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E005",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                }
+            },
+            "Friday": {
+                "13:10-14:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E101",
+                    "prof": "JAJ-L",
+                    "type": "cre"
+                },
+                "14:10-15:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E101",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                },
+                "15:10-16:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E101",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                }
+            }
+        },
+        "E9": {
+            "Monday": {
+                "10:00-10:55": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E101",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "16:15-17:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E102",
+                    "prof": "ABY-L",
+                    "type": "ped"
+                }
+            },
+            "Tuesday": {
+                "10:00-10:55": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E313",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                },
+                "11:10-12:05": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "E312",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "16:15-17:10": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E102",
+                    "prof": "JAJ-L",
+                    "type": "cre"
+                },
+                "17:15-18:10": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E102",
+                    "prof": "ABY-L",
+                    "type": "ped"
+                },
+                "14:10-15:05": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "HIC-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                },
+                "15:10-16:05": {
+                    "title": "Chemical Reaction Engineering I Lab",
+                    "code": "24CH302P",
+                    "room": "E108",
+                    "prof": "HIC-P",
+                    "type": "cre-lab",
+                    "isLab": true
+                }
+            },
+            "Wednesday": {
+                "10:00-10:55": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E101",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                },
+                "13:10-14:05": "ELECTIVE",
+                "14:10-15:05": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "UDA-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I Lab",
+                    "code": "24CH301P",
+                    "room": "E109",
+                    "prof": "UDA-P",
+                    "type": "mto-lab",
+                    "isLab": true
+                }
+            },
+            "Thursday": {
+                "10:00-10:55": {
+                    "title": "CDC Training",
+                    "code": "22CDC005",
+                    "room": "E310",
+                    "prof": "CDCT-L",
+                    "type": "cdc"
+                },
+                "13:10-14:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E101",
+                    "prof": "JAJ-L",
+                    "type": "cre"
+                },
+                "14:10-15:05": {
+                    "title": "Process Equipment Design",
+                    "code": "24CH303T",
+                    "room": "E005",
+                    "prof": "ABY-L",
+                    "type": "ped"
+                },
+                "15:10-16:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E005",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                },
+                "16:15-17:10": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E101",
+                    "prof": "AYD-L + ABY-L",
+                    "type": "ped-lab",
+                    "isLab": true
+                },
+                "17:15-18:10": {
+                    "title": "Process Equipment Design Lab",
+                    "code": "24CH303P",
+                    "room": "E101",
+                    "prof": "AYD-L + ABY-L",
+                    "type": "ped-lab",
+                    "isLab": true
+                }
+            },
+            "Friday": {
+                "13:10-14:05": {
+                    "title": "Chemical Reaction Engineering I",
+                    "code": "24CH302T",
+                    "room": "E101",
+                    "prof": "JAJ-L",
+                    "type": "cre"
+                },
+                "14:10-15:05": {
+                    "title": "Mass Transfer Operations - I",
+                    "code": "24CH301T",
+                    "room": "E101",
+                    "prof": "MSI-L",
+                    "type": "mto"
+                },
+                "15:10-16:05": {
+                    "title": "Engineering Economics",
+                    "code": "24HS301T",
+                    "room": "E101",
+                    "prof": "GRRA-L",
+                    "type": "eco"
+                }
+            }
+        }
+    }
+}
