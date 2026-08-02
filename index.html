@@ -5666,13 +5666,7 @@
         function setDefaultDay() {
             const daysMap = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             const today = daysMap[new Date().getDay()];
-            if (today !== "Sunday") {
-                                headline.innerHTML = "🐺 Stratton Oakmont — Market Closed";
-                subtext.innerText = "No lectures scheduled today. Rest up & enjoy your weekend!";
-                if (nextContainer) nextContainer.style.display = "none";
-                return;
-            }
-            highlightActiveDayChip(today);
+            highlightActiveDayChip(today === "Sunday" ? "Monday" : today);
         }
 
         function highlightActiveDayChip(todayName) {
@@ -5916,8 +5910,8 @@ function updateLiveClockEngine() {
             const nextContainer = document.getElementById("live-next-container");
 
             if (todayName === "Sunday" || todayName === "Saturday") {
-                headline.innerHTML = "☕ Weekend — No Classes Today";
-                subtext.innerText = "Enjoy your weekend break! Classes resume Monday 9:00 AM.";
+                headline.innerHTML = "⚗️ Los Pollos Hermanos — Lab Closed";
+                subtext.innerText = "No lectures scheduled today. We start cooking again on Monday! 🧪";
                 if (nextContainer) nextContainer.style.display = "none";
                 return;
             }
