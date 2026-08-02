@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <!-- ⚡ Instant Zero-Flicker Dark Mode Head Script -->
+    <script>
+        (function() {
+            try {
+                if (localStorage.getItem("csbs_dark_mode") === "1") {
+                    document.documentElement.classList.add("dark-mode");
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <title>Chemical Engineering Timetable</title>
     
     <!-- Google Fonts -->
@@ -82,6 +93,451 @@
             --safe-top: env(safe-area-inset-top, 0px);
             --safe-bottom: env(safe-area-inset-bottom, 0px);
         }
+
+        
+        /* ═══════════════════════════════════════════════
+           🌙 PREMIUM DARK MODE — Deep Space Theme
+        ═══════════════════════════════════════════════ */
+        html.dark-mode,
+        html.dark-mode body,
+        body.dark-mode {
+            background-color: #080d1a !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-mode {
+            --bg-body: #080d1a;
+            --bg-surface: #0f1629;
+            --bg-card: #141e33;
+            --bg-card-hover: #1a2640;
+            --border-color: #1e2f50;
+            --border-highlight: rgba(139, 92, 246, 0.4);
+
+            --text-primary: #ffffff;
+            --text-secondary: #cbd5e1;
+            --text-tertiary: #94a3b8;
+
+            --accent-primary: #818cf8;
+            --accent-glow: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            --accent-gradient: linear-gradient(90deg, #60a5fa, #818cf8, #a78bfa);
+
+            /* Subject badges — rich dark tones */
+            --color-minor-bg: #2d0a14;
+            --color-minor-text: #fb7185;
+            --color-minor-border: #f43f5e;
+
+            --color-dt-bg: #2a1200;
+            --color-dt-text: #fb923c;
+            --color-dt-border: #f97316;
+
+            --color-se-bg: #052e16;
+            --color-se-text: #4ade80;
+            --color-se-border: #22c55e;
+
+            --color-cn-bg: #0c1a40;
+            --color-cn-text: #60a5fa;
+            --color-cn-border: #3b82f6;
+
+            --color-cloud-bg: #1e0a3c;
+            --color-cloud-text: #c084fc;
+            --color-cloud-border: #a855f7;
+
+            --color-elective-bg: #1c1400;
+            --color-elective-text: #fbbf24;
+            --color-elective-border: #f59e0b;
+
+            --color-cdcell-bg: #111827;
+            --color-cdcell-text: #94a3b8;
+            --color-cdcell-border: #334155;
+        }
+
+        /* ── Smooth hardware-accelerated scoped theme transitions ── */
+        body,
+        .timetable-card,
+        .info-bar,
+        .user-profile-badge-bar,
+        .mobile-card,
+        .modal-sheet,
+        .modal-content,
+        .bottom-sheet,
+        .login-card,
+        .login-select-input,
+        .student-preview-card,
+        .welcome-card-anim,
+        .welcome-pill,
+        .day-chip,
+        .meta-pill,
+        .detail-card,
+        .dark-toggle-row,
+        .profile-header-chip {
+            transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ── Main surfaces ── */
+        body.dark-mode .timetable-card {
+            background: #0f1629 !important;
+            border-color: var(--border-color) !important;
+        }
+
+        body.dark-mode .info-bar {
+            background: #141e33 !important;
+            border-color: var(--border-color) !important;
+        }
+
+        body.dark-mode .info-item-label {
+            color: var(--text-secondary) !important;
+        }
+
+        body.dark-mode .info-item-value {
+            color: var(--text-primary) !important;
+        }
+
+        /* ── User Profile Badge Bar ── */
+        body.dark-mode .user-profile-badge-bar {
+            background: #111a2e !important;
+            border: 1.5px solid rgba(99, 102, 241, 0.35) !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        body.dark-mode .profile-badge-item .badge-label {
+            color: #a5b4fc !important;
+            font-weight: 700 !important;
+        }
+
+        body.dark-mode .profile-badge-item strong {
+            color: #ffffff !important;
+            font-weight: 850 !important;
+            letter-spacing: -0.01em !important;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        body.dark-mode .profile-badge-item:last-child {
+            border-top-color: rgba(99, 102, 241, 0.3) !important;
+        }
+
+        /* ── Zero-Flash Dark Splash Screen ── */
+        html.dark-mode #splash-screen,
+        body.dark-mode #splash-screen {
+            background: linear-gradient(135deg, #080d1a 0%, #0f1629 100%) !important;
+        }
+
+        html.dark-mode #splash-screen div,
+        body.dark-mode #splash-screen div,
+        html.dark-mode #splash-screen span,
+        body.dark-mode #splash-screen span {
+            color: #ffffff !important;
+        }
+
+        /* ── Welcome Celebration Toast Overlay Dark Mode ── */
+        body.dark-mode #welcome-anim-overlay {
+            background: rgba(0, 0, 0, 0.85) !important;
+        }
+
+        body.dark-mode .welcome-card-anim {
+            background: #0f172a !important;
+            border: 1.5px solid #1e2f50 !important;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75) !important;
+        }
+
+        body.dark-mode .welcome-text-sub {
+            color: #94a3b8 !important;
+        }
+
+        body.dark-mode .welcome-text-name {
+            color: #60a5fa !important;
+        }
+
+        body.dark-mode .welcome-pill {
+            background: #1e293b !important;
+            color: #a5b4fc !important;
+            border: 1px solid #334155 !important;
+        }
+
+        body.dark-mode #welcome-elective-tag {
+            color: #cbd5e1 !important;
+        }
+
+        /* ── Login Console Modal ── */
+        body.dark-mode #login-modal {
+            background: rgba(0, 0, 0, 0.85) !important;
+        }
+
+        body.dark-mode .login-card {
+            background: #0f172a !important;
+            border: 1.5px solid #1e2f50 !important;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75) !important;
+        }
+
+        body.dark-mode .login-title {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .login-sub {
+            color: #94a3b8 !important;
+        }
+
+        body.dark-mode .login-input-label {
+            color: #a5b4fc !important;
+            font-weight: 700 !important;
+        }
+
+        body.dark-mode .login-select-input {
+            background: #1e293b !important;
+            border-color: #334155 !important;
+            color: #ffffff !important;
+            font-weight: 800 !important;
+        }
+
+        body.dark-mode .login-select-input::placeholder {
+            color: #64748b !important;
+        }
+
+        body.dark-mode .login-select-input:focus {
+            background: #1e293b !important;
+            border-color: #818cf8 !important;
+            color: #ffffff !important;
+            box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.25) !important;
+        }
+
+        body.dark-mode .student-preview-card {
+            background: #141e33 !important;
+            border: 1px solid #1e2f50 !important;
+        }
+
+        body.dark-mode .preview-name {
+            color: #ffffff !important;
+            font-weight: 850 !important;
+        }
+
+        body.dark-mode .preview-tag {
+            background: #1e293b !important;
+            border: 1px solid #334155 !important;
+            color: #a5b4fc !important;
+            font-weight: 700 !important;
+        }
+
+        body.dark-mode .preview-email {
+            color: #94a3b8 !important;
+        }
+
+        body.dark-mode .login-confirm-btn {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+            color: #ffffff !important;
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.45) !important;
+        }
+
+        /* ── Day Chips — inactive ── */
+        body.dark-mode .day-chip {
+            background: #141e33 !important;
+            border: 1.5px solid #1e2f50 !important;
+            color: #cbd5e1 !important;
+        }
+
+        body.dark-mode .day-chip .day-sub {
+            color: #94a3b8 !important;
+        }
+
+        /* ── Day Chip — ACTIVE (glowing violet) ── */
+        body.dark-mode .day-chip.active {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+            border-color: transparent !important;
+            color: #ffffff !important;
+            box-shadow: 0 6px 24px rgba(99, 102, 241, 0.55) !important;
+        }
+
+        body.dark-mode .day-chip.active .day-sub {
+            color: rgba(255,255,255,0.9) !important;
+        }
+
+        /* ── TODAY badge pill ── */
+        body.dark-mode .today-badge-pill {
+            background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+            color: #fff !important;
+        }
+
+        /* ── Mobile timetable cards ── */
+        body.dark-mode .mobile-card {
+            background: #141e33 !important;
+            border-color: #1e2f50 !important;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.45) !important;
+        }
+
+        body.dark-mode .mobile-card.is-break,
+        body.dark-mode .mobile-card.is-lunch {
+            background: #0f1629 !important;
+            border-color: #1e2f50 !important;
+        }
+
+        body.dark-mode .card-title {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .card-time {
+            color: #cbd5e1 !important;
+        }
+
+        body.dark-mode .card-time svg {
+            stroke: #cbd5e1 !important;
+        }
+
+        /* ── Meta pills (Room / Prof) ── */
+        body.dark-mode .meta-pill {
+            background: #0f1629 !important;
+            border-color: #1e2f50 !important;
+        }
+
+        body.dark-mode .meta-pill span {
+            color: #cbd5e1 !important;
+        }
+
+        body.dark-mode .meta-pill strong {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .meta-pill svg {
+            color: #94a3b8 !important;
+        }
+
+        /* ── Lab session badge ── */
+        body.dark-mode .lab-span-badge {
+            background: rgba(139, 92, 246, 0.2) !important;
+            color: #c084fc !important;
+            border: 1px solid rgba(139, 92, 246, 0.3) !important;
+        }
+
+        /* ── Short Break / Lunch badge ── */
+        body.dark-mode .card-badge {
+            background: #1e2f50 !important;
+            color: #cbd5e1 !important;
+        }
+
+        /* ── Header profile chip ── */
+        body.dark-mode .profile-header-chip {
+            background: #141e33 !important;
+            border-color: #1e2f50 !important;
+        }
+
+        body.dark-mode .profile-chip-name {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .profile-chip-roll {
+            color: #cbd5e1 !important;
+        }
+
+        /* ── Bottom sheet / modal-sheet / modal-content ── */
+        body.dark-mode .sheet-overlay,
+        body.dark-mode .modal-overlay {
+            background: rgba(0,0,0,0.8) !important;
+        }
+
+        body.dark-mode .bottom-sheet,
+        body.dark-mode .modal-sheet,
+        body.dark-mode .modal-content {
+            background: #0f172a !important;
+            border: 1px solid #1e2f50 !important;
+        }
+
+        body.dark-mode .sheet-title,
+        body.dark-mode .modal-title,
+        body.dark-mode #modal-title {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .sheet-code,
+        body.dark-mode .sheet-subtitle,
+        body.dark-mode .modal-code,
+        body.dark-mode #modal-code {
+            color: #818cf8 !important;
+        }
+
+        /* ── Detail cards inside profile sheet ── */
+        body.dark-mode .detail-card {
+            background: #1e293b !important;
+            border: 1px solid #334155 !important;
+        }
+
+        body.dark-mode .detail-label {
+            color: #94a3b8 !important;
+        }
+
+        body.dark-mode .detail-value {
+            color: #ffffff !important;
+        }
+
+        /* ── Sheet drag handle ── */
+        body.dark-mode .sheet-drag-handle,
+        body.dark-mode .sheet-handle {
+            background: #334155 !important;
+        }
+
+        /* ── Close button ── */
+        body.dark-mode .modal-close-btn,
+        body.dark-mode .sheet-close-btn {
+            background: #1e293b !important;
+            color: #cbd5e1 !important;
+            border-color: #334155 !important;
+        }
+
+        /* ── Dark toggle row itself ── */
+        body.dark-mode .dark-toggle-row {
+            background: #1e293b !important;
+            border-color: #334155 !important;
+        }
+
+        body.dark-mode .dark-toggle-title {
+            color: #ffffff !important;
+        }
+
+        /* ── Switch Profile button ── */
+        body.dark-mode .switch-account-btn {
+            background: rgba(239, 68, 68, 0.15) !important;
+            color: #f87171 !important;
+            border: 1px solid rgba(239, 68, 68, 0.3) !important;
+        }
+
+        /* ═══ ☀️🌙 Premium Sun/Moon Toggle Switch ═══ */
+        .dark-toggle-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.85rem 1rem;
+            border-radius: 16px;
+            background: var(--bg-body);
+            border: 1px solid var(--border-color);
+            margin-top: 0.75rem;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .theme-switch-track {
+            position: relative;
+            width: 56px;
+            height: 30px;
+            background: #cbd5e1;
+            border-radius: 999px;
+            padding: 3px;
+            transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.12);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .theme-switch-thumb {
+            width: 24px;
+            height: 24px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease;
+            will-change: transform;
+            user-select: none;
+        }
+
 
         /* Reset */
         * {
@@ -1272,6 +1728,74 @@
             transform: scale(0.97);
             background: #ffe4e6;
         }
+    
+        /* ═══ 💬 Creator Query Button & Modal ═══ */
+        .creator-query-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.45rem;
+            background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+            color: #ffffff;
+            font-size: 0.78rem;
+            font-weight: 800;
+            padding: 0.5rem 0.85rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(253, 29, 29, 0.35);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: nowrap;
+            max-width: 100%;
+        }
+        .creator-query-btn:hover, .creator-query-btn:active {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 6px 20px rgba(253, 29, 29, 0.5);
+        }
+        .creator-note-box {
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(10px);
+            border: 1.5px solid rgba(253, 29, 29, 0.35);
+            border-radius: 18px;
+            padding: 1.15rem;
+            color: #e2e8f0;
+            font-size: 0.88rem;
+            line-height: 1.55;
+            margin-bottom: 1.25rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .instagram-dm-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.65rem;
+            width: 100%;
+            padding: 0.95rem;
+            background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+            color: #ffffff !important;
+            font-weight: 850;
+            font-size: 0.95rem;
+            border-radius: 16px;
+            text-decoration: none !important;
+            box-shadow: 0 6px 20px rgba(253, 29, 29, 0.4);
+            transition: all 0.25s ease;
+            box-sizing: border-box;
+        }
+        .instagram-dm-btn:hover, .instagram-dm-btn:active {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(253, 29, 29, 0.6);
+        }
+        @media (max-width: 480px) {
+            .creator-query-btn {
+                font-size: 0.74rem;
+                padding: 0.42rem 0.75rem;
+                width: 100%;
+                margin-top: 0.2rem;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -1381,10 +1905,34 @@
 
         <!-- Live Device Clock & Today's Status Banner Card (Extended with Next Class Preview & Greeting) -->
         <div class="live-status-card">
-            <div id="live-greeting" style="font-size: 0.85rem; font-weight: 700; opacity: 0.9; letter-spacing: 0.02em;">Welcome!</div>
-            <div class="live-card-top" style="margin-top: 0.15rem;">
-                <span class="live-date-text" id="live-date-str">Wednesday, Jul 22</span>
-                <span class="live-clock-badge" id="live-clock-str">06:40 PM</span>
+            <div class="live-card-top" style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; margin-bottom: 0.75rem;">
+                <!-- Left: Greeting & Date -->
+                <div style="display: flex; flex-direction: column; gap: 0.2rem; align-items: flex-start;">
+                    <div id="live-greeting" style="font-size: 0.82rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #a78bfa; text-shadow: 0 0 10px rgba(167, 139, 250, 0.25);">GOOD MORNING</div>
+                    <span class="live-date-text" id="live-date-str" style="font-size: 0.95rem; font-weight: 800; color: #ffffff;">Wednesday, Jul 22</span>
+                </div>
+                <!-- Right Side: Top-Right Stacked Clock & Weather Corner Unit -->
+                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; margin-left: auto;">
+                    <!-- Top Pill: Clock & Temp -->
+                    <div id="weather-pill-container" style="display: flex; align-items: center; gap: 0.45rem; padding: 0.28rem 0.65rem; border-radius: 9999px; background: rgba(255, 255, 255, 0.18); border: 1px solid rgba(255, 255, 255, 0.28); backdrop-filter: blur(8px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                        <span id="live-clock-str" style="font-size: 0.85rem; font-weight: 850; color: #ffffff; letter-spacing: -0.01em;">--:-- --</span>
+                        <span style="opacity: 0.35; font-size: 0.75rem; color: #ffffff;">•</span>
+                        <div style="display: inline-flex; align-items: center; gap: 0.35rem;">
+                            <span id="weather-icon" style="font-size: 1.05rem;">🌤️</span>
+                            <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1;">
+                                <span id="weather-temp" style="font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 900; color: #ffffff; letter-spacing: -0.01em;">--°C</span>
+                                <div style="display: flex; align-items: center; gap: 0.15rem; font-size: 0.58rem; font-weight: 850; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 0.08rem;">
+                                    <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    <span>PDEU</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bottom White Guidance Bubble Pill -->
+                    <div id="weather-guidance-pill" style="padding: 0.18rem 0.55rem; border-radius: 9999px; background: #ffffff; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12); display: inline-flex; align-items: center;">
+                        <span id="weather-guidance" style="font-size: 0.68rem; font-weight: 900; color: #059669; text-transform: uppercase; letter-spacing: 0.03em;">LOADING...</span>
+                    </div>
+                </div>
             </div>
             <div class="live-current-headline" id="live-headline">
                 🟢 Today's Schedule Active
@@ -1393,6 +1941,17 @@
                 Checking current timetable for your division & group...
             </div>
             <!-- Next Class Container (Not highlighted, clean contrast design) -->
+            <!-- Live Class Progress Tube Bar (Cyan-Mint Gradient) -->
+            <div id="live-progress-container" style="display: none; width: 100%; margin-top: 0.75rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                    <span style="font-size: 0.75rem; font-weight: 800; color: #a78bfa; text-transform: uppercase; letter-spacing: 0.05em;">⏳ LECTURE PROGRESS</span>
+                    <span id="live-progress-text" style="font-size: 0.78rem; font-weight: 850; color: #ffffff;">0% Complete</span>
+                </div>
+                <div style="width: 100%; height: 8px; background: rgba(255, 255, 255, 0.2); border-radius: 999px; overflow: hidden;">
+                    <div id="live-progress-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, #38bdf8 0%, #34d399 100%); border-radius: 999px; transition: width 0.4s ease;"></div>
+                </div>
+            </div>
+
             <div id="live-next-container" style="margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid rgba(255, 255, 255, 0.2); display: none; flex-direction: column; gap: 0.2rem;">
                 <div style="font-size: 0.65rem; text-transform: uppercase; font-weight: 850; letter-spacing: 0.05em; opacity: 0.7;">➡️ Next Class</div>
                 <div style="font-size: 0.8rem; font-weight: 600; opacity: 0.9;" id="live-next-headline">Next Class Title</div>
@@ -1422,6 +1981,11 @@
                     </div>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
                 </div>
+
+                <button class="creator-query-btn" onclick="openCreatorQueryModal()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span>Got a Query? DM Me</span>
+                </button>
 
                 <button class="android-install-btn" id="btn-android-install" onclick="triggerAndroidPWAInstall()">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
@@ -4911,7 +5475,8 @@
             
             // Start live clock & current class engine
             updateLiveClockEngine();
-            setInterval(updateLiveClockEngine, 30000); // refresh every 30s
+            updateLiveClockEngine(); // Call immediately
+        setInterval(updateLiveClockEngine, 1000); // 1s real-time refresh // refresh every 30s
 
             window.addEventListener('resize', adjustScale);
 
@@ -5046,6 +5611,15 @@
                     <span class="detail-label">Chosen Elective Subject</span>
                     <span class="detail-value">${electiveNames[loggedInStudent.elective]}</span>
                 </div>
+                <div class="dark-toggle-row" onclick="toggleDarkMode()">
+                    <div style="display: flex; flex-direction: column; gap: 0.15rem;">
+                        <span style="font-size: 0.88rem; font-weight: 700;" class="dark-toggle-title">Theme Mode</span>
+                        <span id="dark-toggle-desc" style="font-size: 0.72rem; font-weight: 600; color: var(--text-tertiary);">Light Mode Active</span>
+                    </div>
+                    <div class="theme-switch-track" id="theme-switch-track">
+                        <div class="theme-switch-thumb" id="theme-switch-thumb">☀️</div>
+                    </div>
+                </div>
                 <button class="switch-account-btn" onclick="switchAccountAction()">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
                     Switch Profile / Login Different Roll No
@@ -5089,7 +5663,10 @@
             const daysMap = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             const today = daysMap[new Date().getDay()];
             if (today !== "Sunday") {
-                currentDay = today;
+                                headline.innerHTML = "🐺 Stratton Oakmont — Market Closed";
+                subtext.innerText = "No lectures scheduled today. Rest up & enjoy your weekend!";
+                if (nextContainer) nextContainer.style.display = "none";
+                return;
             }
             highlightActiveDayChip(today);
         }
@@ -5136,6 +5713,9 @@
         function populateGroups() {
             const divSelect = document.getElementById("div-select");
             const groupSelect = document.getElementById("group-select");
+            const _pCont = document.getElementById("live-progress-container");
+            if (_pCont) _pCont.style.display = "none";
+
             const division = divSelect.value;
             groupSelect.innerHTML = "";
             if (division === "1") {
@@ -5190,7 +5770,112 @@
         function downloadOfficialPDF() {}
 
         // Live Clock & Current Active Class Smart Engine
-        function updateLiveClockEngine() {
+        
+        // ═══════════════════════════════════════════════
+        // 🌦️ Real-Time PDEU Campus Weather Engine
+        // ═══════════════════════════════════════════════
+        async function fetchCampusWeather() {
+            try {
+                const cTemp = localStorage.getItem("pdpu_w_temp");
+                const cGuide = localStorage.getItem("pdpu_w_guide");
+                const cIcon = localStorage.getItem("pdpu_w_icon");
+                if (cTemp && cGuide && cIcon) {
+                    const tE = document.getElementById("weather-temp");
+                    const gE = document.getElementById("weather-guidance");
+                    const iE = document.getElementById("weather-icon");
+                    if (tE && gE && iE) {
+                        tE.innerText = cTemp;
+                        gE.innerText = cGuide;
+                        iE.innerText = cIcon;
+                    }
+                }
+            } catch (e) {}
+
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 2500);
+
+            try {
+                const url = "https://api.open-meteo.com/v1/forecast?latitude=23.1558&longitude=72.6669&current=temperature_2m,precipitation,rain,showers,weather_code&timezone=Asia%2FKolkata";
+                const res = await fetch(url, { signal: controller.signal });
+                clearTimeout(timeoutId);
+                if (!res.ok) return;
+                const data = await res.json();
+                if (!data || !data.current) return;
+
+                const temp = Math.round(data.current.temperature_2m);
+                const code = data.current.weather_code;
+                const precip = data.current.precipitation || 0;
+                const rain = data.current.rain || 0;
+                const showers = data.current.showers || 0;
+
+                const tempElem = document.getElementById("weather-temp");
+                const iconElem = document.getElementById("weather-icon");
+                const guideElem = document.getElementById("weather-guidance");
+                if (!tempElem || !iconElem || !guideElem) return;
+
+                let tempStr = `${temp}°C`;
+                let iconStr = "🌤️";
+                let guideStr = "PLEASANT";
+                let textColor = "#059669";
+
+                const isHeavy = (code >= 95 || precip >= 0.5 || rain >= 0.5 || showers >= 0.5);
+                const isLight = ((code >= 51 && code <= 67) || (code >= 80 && code <= 82) || precip > 0 || rain > 0 || showers > 0);
+
+                if (isHeavy) {
+                    iconStr = "⛈️";
+                    guideStr = "HEAVY RAIN!";
+                    textColor = "#0284c7";
+                } else if (isLight) {
+                    iconStr = "🌧️";
+                    guideStr = "RAIN ALERT!";
+                    textColor = "#0284c7";
+                } else if (code === 45 || code === 48) {
+                    iconStr = "🌫️";
+                    guideStr = "MORNING FOG";
+                    textColor = "#475569";
+                } else if (code === 3) {
+                    iconStr = "☁️";
+                    guideStr = "OVERCAST";
+                    textColor = "#475569";
+                } else {
+                    if (code === 0) iconStr = "☀️";
+                    else iconStr = "🌤️";
+
+                    if (temp >= 38) {
+                        guideStr = "HIGH HEAT!";
+                        textColor = "#ea580c";
+                    } else if (temp >= 32) {
+                        guideStr = "SUNNY SKY";
+                        textColor = "#d97706";
+                    } else if (temp >= 22) {
+                        guideStr = "PLEASANT";
+                        textColor = "#059669";
+                    } else if (temp >= 16) {
+                        guideStr = "COOL BREEZE";
+                        textColor = "#2563eb";
+                    } else {
+                        guideStr = "COLD MORNING!";
+                        textColor = "#4f46e5";
+                    }
+                }
+
+                tempElem.innerText = tempStr;
+                iconElem.innerText = iconStr;
+                guideElem.innerText = guideStr;
+                guideElem.style.color = textColor;
+
+                try {
+                    localStorage.setItem("pdpu_w_temp", tempStr);
+                    localStorage.setItem("pdpu_w_guide", guideStr);
+                    localStorage.setItem("pdpu_w_icon", iconStr);
+                } catch(e) {}
+            } catch (err) {}
+        }
+
+        fetchCampusWeather();
+        setInterval(fetchCampusWeather, 60000);
+
+function updateLiveClockEngine() {
             const now = new Date();
             const daysMap = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             const todayName = daysMap[now.getDay()];
@@ -5349,6 +6034,20 @@
                     const fullSubject = subjectFullNames[cellData.title] || cellData.title;
                     const fullProf = getProfNames(cellData.prof);
                     headline.innerHTML = `🟢 NOW: ${fullSubject}`;
+
+                    // ✨ Live Class Progress Tube Bar — fills 0→100% during active class
+                    const progContainer = document.getElementById("live-progress-container");
+                    const progFill = document.getElementById("live-progress-fill");
+                    const progText = document.getElementById("live-progress-text");
+                    if (progContainer && progFill && progText) {
+                        const elapsed = currentMinutes - activeMatch.start;
+                        const totalDuration = activeMatch.end - activeMatch.start;
+                        const remainingMins = Math.max(0, activeMatch.end - currentMinutes);
+                        const pct = Math.min(100, Math.max(0, Math.round((elapsed / totalDuration) * 100)));
+                        progContainer.style.display = "block";
+                        progFill.style.width = pct + "%";
+                        progText.innerText = `${pct}% Complete (${remainingMins}m left)`;
+                    }
                     subtext.innerText = `Room ${cellData.room || '—'} · ${fullProf} (${activeMatch.label.replace(/^0/, '')})`;
                     return;
                 } else {
@@ -5735,6 +6434,133 @@
         function closeModal(event) {
             document.getElementById("detail-modal").classList.remove("active");
         }
+    
+        // ═══════════════════════════════════════════════
+        // ☀️🌙 PREMIUM SUN / MOON DARK MODE ENGINE
+        // ═══════════════════════════════════════════════
+        function updateSunMoonUI(isDark) {
+            const thumb = document.getElementById("theme-switch-thumb");
+            const track = document.getElementById("theme-switch-track");
+            const desc = document.getElementById("dark-toggle-desc");
+
+            if (isDark) {
+                if (thumb) {
+                    thumb.innerHTML = "🌙";
+                    thumb.style.transform = "translateX(26px)";
+                    thumb.style.background = "#1e1b4b";
+                }
+                if (track) {
+                    track.style.background = "linear-gradient(135deg, #6366f1, #8b5cf6)";
+                }
+                if (desc) {
+                    desc.innerText = "Dark Theme Active";
+                    desc.style.color = "#a78bfa";
+                }
+            } else {
+                if (thumb) {
+                    thumb.innerHTML = "☀️";
+                    thumb.style.transform = "translateX(0px)";
+                    thumb.style.background = "#ffffff";
+                }
+                if (track) {
+                    track.style.background = "#cbd5e1";
+                }
+                if (desc) {
+                    desc.innerText = "Light Theme Active";
+                    desc.style.color = "#64748b";
+                }
+            }
+        }
+
+        function applyDarkMode(isDark) {
+            if (isDark) {
+                document.documentElement.classList.add("dark-mode");
+                document.body.classList.add("dark-mode");
+                localStorage.setItem("csbs_dark_mode", "1");
+            } else {
+                document.documentElement.classList.remove("dark-mode");
+                document.body.classList.remove("dark-mode");
+                localStorage.setItem("csbs_dark_mode", "0");
+            }
+            updateSunMoonUI(isDark);
+        }
+
+        function toggleDarkMode() {
+            const isDark = !document.body.classList.contains("dark-mode");
+            applyDarkMode(isDark);
+        }
+
+        // Restore dark mode preference instantly on load
+        (function() {
+            const saved = localStorage.getItem("csbs_dark_mode");
+            if (saved === "1") {
+                document.documentElement.classList.add("dark-mode");
+                if (document.body) document.body.classList.add("dark-mode");
+            }
+        })();
+
+        // Sync switch state whenever profile sheet opens
+        const _origOpenProfileSheetChem = window.openProfileSheet;
+        window.openProfileSheet = function() {
+            if (_origOpenProfileSheetChem) _origOpenProfileSheetChem();
+            const isDark = document.body.classList.contains("dark-mode");
+            updateSunMoonUI(isDark);
+        };
+
+        // ═══ 💬 Creator Query Modal Functions ═══
+        function openCreatorQueryModal() {
+            document.getElementById("creator-query-modal").classList.add("active");
+        }
+        function closeCreatorQueryModal(event) {
+            if (!event || event.target.id === "creator-query-modal" || (event.target.closest && event.target.closest('.sheet-close-btn'))) {
+                document.getElementById("creator-query-modal").classList.remove("active");
+            }
+        }
+
     </script>
+
+    <!-- Pro Creator Query & Instagram DM Modal Sheet -->
+    <div class="modal-overlay" id="creator-query-modal" onclick="closeCreatorQueryModal(event)">
+        <div class="modal-sheet" onclick="event.stopPropagation()" style="background: #0f172a; color: #ffffff; border: 2px solid rgba(253, 29, 29, 0.4);">
+            <div class="sheet-drag-handle" style="background: rgba(255,255,255,0.3);"></div>
+            <div class="sheet-header" style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.85rem;">
+                <div style="display: flex; align-items: center; gap: 0.65rem;">
+                    <div style="width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.1rem; color: #ffffff;">
+                        💬
+                    </div>
+                    <div>
+                        <div class="sheet-title" style="color: #ffffff; font-size: 1.15rem; font-weight: 850;">💬 Student Query & Support</div>
+                        <div style="font-size: 0.75rem; color: #94a3b8; font-weight: 600;">PDEU B.Tech Chemical Engineering · Sem 5 Timetable Support</div>
+                    </div>
+                </div>
+                <button class="sheet-close-btn" onclick="closeCreatorQueryModal()" style="color: #94a3b8; background: rgba(255,255,255,0.1);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+
+            <div style="padding: 1.25rem 0 0.5rem 0;">
+                <div class="creator-note-box">
+                    <p style="margin: 0 0 0.75rem 0; font-weight: 600;">
+                        Hey, future Chemical Engineers! 👋
+                    </p>
+                    <p style="margin: 0 0 0.75rem 0;">
+                        I'm a student, just like you — not a professional developer. I made this app just for fun so no one has to keep opening that annoying PDF timetable every day. Everything is right here in one tap.
+                    </p>
+                    <p style="margin: 0 0 0.75rem 0;">
+                        I'm not a hundred percent perfect — and just like everyone else, I make mistakes too. So if you find any wrong slot, a missing update, a glitch, or anything that looks off, just DM me on Instagram.
+                    </p>
+                    <p style="margin: 0; font-weight: 700; color: #f59e0b;">
+                        I'll get it sorted for you. 👊
+                    </p>
+                </div>
+
+                <a href="https://www.instagram.com/niv_sorathiya05?igsh=MTlqcDd5NXc4bXY1OQ%3D%3D&utm_source=qr" target="_blank" class="instagram-dm-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    <span>📩 DM Me on Instagram (@niv_sorathiya05)</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
