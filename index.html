@@ -5666,7 +5666,12 @@
         function setDefaultDay() {
             const daysMap = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             const today = daysMap[new Date().getDay()];
-            highlightActiveDayChip(today === "Sunday" ? "Monday" : today);
+            if (today !== "Sunday") {
+                currentDay = today;
+            } else {
+                currentDay = "Monday";
+            }
+            highlightActiveDayChip(today);
         }
 
         function highlightActiveDayChip(todayName) {
