@@ -5882,15 +5882,18 @@ function updateLiveClockEngine() {
             const now = new Date();
             const daysMap = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             const todayName = daysMap[now.getDay()];
+            const currentDayName = todayName;
             
             // Format Live Date & Time String
             const options = { weekday: 'long', month: 'short', day: 'numeric', year: 'numeric' };
-            document.getElementById("live-date-str").innerText = now.toLocaleDateString('en-US', options);
+            if (document.getElementById("live-date-str")) {
+                document.getElementById("live-date-str").innerText = now.toLocaleDateString('en-US', options);
+            }
             
-            // Force 12-hour format with AM/PM explicitly without leading zeros for hours
-            document.getElementById("live-clock-str").innerText = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', hour12: true });
+            if (document.getElementById("live-clock-str")) {
+                document.getElementById("live-clock-str").innerText = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', hour12: true });
+            }
 
-            // Generate dynamic time-of-day greeting (Good Morning, Afternoon, Evening, Night)
             const hours = now.getHours();
             let greetingStr = "Hello";
             if (hours >= 5 && hours < 12) {
@@ -5905,14 +5908,24 @@ function updateLiveClockEngine() {
             const greetingName = loggedInStudent ? getFirstName(loggedInStudent.name) : "Student";
             const greetingElem = document.getElementById("live-greeting");
             if (greetingElem) {
-                greetingElem.innerText = `${greetingStr}, ${greetingName}!`;
+                greetingElem.innerText = `${greetingStr}, ${greetingName}!`.toUpperCase();
             }
-
-            const currentMinutes = now.getHours() * 60 + now.getMinutes();
 
             const headline = document.getElementById("live-headline");
             const subtext = document.getElementById("live-subtext");
             const nextContainer = document.getElementById("live-next-container");
+
+            if (!headline || !subtext) return;
+
+            const _pCont = document.getElementById("live-progress-container");
+            if (_pCont) _pCont.style.display = "none";
+
+            const division = loggedInStudent ? loggedInStudent.div : 1;
+            const group = loggedInStudent ? (loggedInStudent.group || (division == 1 ? 'E1' : 'E4')) : (division == 1 ? 'E1' : 'E4');
+            const electiveKey = document.getElementById("elective-select") ? document.getElementById("elective-select").value : "PRPC";
+            const activeElectiveName = electiveNames[electiveKey];
+            const divKey = "div" + division;
+            const activeSchedule = schedules[divKey][group];
 
             if (todayName === "Sunday" || todayName === "Saturday") {
                 headline.innerHTML = "⚗️ Los Pollos Hermanos — Lab Closed";
@@ -5921,51 +5934,43 @@ function updateLiveClockEngine() {
                 return;
             }
 
-            const division = document.getElementById("div-select").value;
-            const group = document.getElementById("group-select").value;
-            const electiveKey = document.getElementById("elective-select").value;
-            const divKey = "div" + division;
-            const activeSchedule = schedules[divKey][group];
-            const activeElectiveName = electiveNames[electiveKey];
-
-            // Define Time Slot Minute Boundaries
+            const currentMinutes = now.getHours() * 60 + now.getMinutes();
             const timeRanges = [
-                { start: 540, end: 595, slot: "09:00-09:55", label: "9:00 AM – 9:55 AM" },
-                { start: 600, end: 655, slot: "10:00-10:55", label: "10:00 AM – 10:55 AM" },
-                { start: 655, end: 670, slot: "10:55-11:10", isBreak: true, label: "10:55 AM – 11:10 AM" },
-                { start: 670, end: 725, slot: "11:10-12:05", label: "11:10 AM – 12:05 PM" },
-                { start: 730, end: 785, slot: "12:10-13:05", label: "12:10 PM – 1:05 PM" },
-                { start: 790, end: 845, slot: "13:10-14:05", label: "1:10 PM – 2:05 PM" },
-                { start: 850, end: 905, slot: "14:10-15:05", label: "2:10 PM – 3:05 PM" },
-                { start: 910, end: 965, slot: "15:10-16:05", label: "3:10 PM – 4:05 PM" },
-                { start: 965, end: 975, slot: "16:05-16:15", isBreak: true, label: "4:05 PM – 4:15 PM" },
-                { start: 975, end: 1030, slot: "16:15-17:10", label: "4:15 PM – 5:10 PM" },
-                { start: 1035, end: 1090, slot: "17:15-18:10", label: "5:15 PM – 6:10 PM" }
+                { slot: "8:00 AM - 9:00 AM", start: 480, end: 540, label: "8:00 AM – 9:00 AM" },
+                { slot: "9:00 AM - 10:00 AM", start: 540, end: 600, label: "9:00 AM – 10:00 AM" },
+                { slot: "10:00 AM - 11:00 AM", start: 600, end: 660, label: "10:00 AM – 11:00 AM" },
+                { slot: "11:00 AM - 12:00 PM", start: 660, end: 720, label: "11:00 AM – 12:00 PM" },
+                { slot: "12:00 PM - 1:00 PM", start: 720, end: 780, label: "12:00 PM – 1:00 PM" },
+                { slot: "1:00 PM - 2:00 PM", start: 780, end: 840, label: "1:00 PM – 2:00 PM" },
+                { slot: "2:00 PM - 3:00 PM", start: 840, end: 900, label: "2:00 PM – 3:00 PM" },
+                { slot: "3:00 PM - 4:00 PM", start: 900, end: 960, label: "3:00 PM – 4:00 PM" },
+                { slot: "4:00 PM - 5:00 PM", start: 960, end: 1020, label: "4:00 PM – 5:00 PM" },
+                { slot: "5:00 PM - 6:00 PM", start: 1020, end: 1080, label: "5:00 PM – 6:00 PM" }
             ];
 
-            // Find next class preview first to populate container
             let nextClassMatch = null;
             let nextClassData = null;
-            for (let range of timeRanges) {
-                if (range.start >= currentMinutes) {
-                    if (range.isBreak) continue;
-                    if (isLunchSlot(division, todayName, range.slot)) continue;
-                    
-                    let data = activeSchedule[todayName] ? activeSchedule[todayName][range.slot] : null;
-                    if (data) {
+
+            if (activeSchedule && activeSchedule[todayName]) {
+                for (let range of timeRanges) {
+                    if (range.start > currentMinutes) {
+                        if (isLunchSlot(division, todayName, range.slot)) continue;
+                        let data = activeSchedule[todayName] ? activeSchedule[todayName][range.slot] : null;
                         if (data === "ELECTIVE") {
                             const electiveSchedKey = `${todayName}_${range.slot}`;
-                            const electiveDetails = electiveSchedules[electiveKey][electiveSchedKey];
+                            const electiveDetails = electiveSchedules[electiveKey] ? electiveSchedules[electiveKey][electiveSchedKey] : null;
                             data = {
                                 title: activeElectiveName,
-                                code: electiveInfo[electiveKey].code,
+                                code: electiveInfo[electiveKey] ? electiveInfo[electiveKey].code : "",
                                 room: electiveDetails ? electiveDetails.room : "—",
                                 prof: electiveDetails ? electiveDetails.prof : "—"
                             };
                         }
-                        nextClassMatch = range;
-                        nextClassData = data;
-                        break;
+                        if (data && typeof data === 'object' && data.title !== 'Lunch Break') {
+                            nextClassMatch = range;
+                            nextClassData = data;
+                            break;
+                        }
                     }
                 }
             }
@@ -5973,32 +5978,27 @@ function updateLiveClockEngine() {
             if (nextContainer) {
                 if (nextClassMatch && nextClassData) {
                     nextContainer.style.display = "flex";
-                    // Timing formatted in 12-hour format without leading zero (e.g. 2:10 PM – 3:05 PM)
                     const timing12h = nextClassMatch.label.replace(/^0/, '');
                     document.getElementById("live-next-headline").innerText = `${subjectFullNames[nextClassData.title] || nextClassData.title} (${timing12h})`;
-                    const nextProfName = getProfNames(nextClassData.prof);
-                    document.getElementById("live-next-subtext").innerText = `Room: ${nextClassData.room || '—'} · Faculty: ${nextProfName}`;
+                    document.getElementById("live-next-subtext").innerText = `Room: ${nextClassData.room || '—'} · Faculty: ${profFullNames[nextClassData.prof] || nextClassData.prof || '—'}`;
                 } else {
                     nextContainer.style.display = "none";
                 }
             }
 
-            // 1. Check if before first class
-            if (currentMinutes < 540) {
-                headline.innerHTML = "🌅 Morning — Classes Start at 9:00 AM";
-                subtext.innerText = `First lecture for Div ${division} (${group}): class starts at 9:00 AM.`;
+            if (currentMinutes < 480) {
+                headline.innerHTML = "🌅 Morning — Classes Start at 8:00 AM";
+                subtext.innerText = `First lecture for Div ${division} (${group}) begins at 8:00 AM.`;
                 return;
             }
 
-            // 2. Check if after last class
-            if (currentMinutes > 1090) {
+            if (currentMinutes >= 1080) {
                 headline.innerHTML = "🌙 Evening — All Classes Completed Today";
                 subtext.innerText = "No more lectures scheduled for today. Have a great evening!";
                 if (nextContainer) nextContainer.style.display = "none";
                 return;
             }
 
-            // 3. Find active slot right now
             let activeMatch = null;
             for (let range of timeRanges) {
                 if (currentMinutes >= range.start && currentMinutes < range.end) {
@@ -6008,15 +6008,9 @@ function updateLiveClockEngine() {
             }
 
             if (activeMatch) {
-                if (activeMatch.isBreak) {
-                    headline.innerHTML = "☕ Short Break Right Now";
-                    subtext.innerText = `Classes resume shortly at ${activeMatch.end === 670 ? '11:10 AM' : '4:15 PM'}.`;
-                    return;
-                }
-
                 if (isLunchSlot(division, todayName, activeMatch.slot)) {
                     headline.innerHTML = "🍱 Lunch Break Time Right Now";
-                    subtext.innerText = "Enjoy your lunch! Next class starts at 1:10 PM.";
+                    subtext.innerText = `Enjoy your lunch! Next class starts soon.`;
                     return;
                 }
 
@@ -6024,21 +6018,21 @@ function updateLiveClockEngine() {
 
                 if (cellData === "ELECTIVE") {
                     const electiveSchedKey = `${todayName}_${activeMatch.slot}`;
-                    const electiveDetails = electiveSchedules[electiveKey][electiveSchedKey];
+                    const electiveDetails = electiveSchedules[electiveKey] ? electiveSchedules[electiveKey][electiveSchedKey] : null;
                     cellData = {
                         title: activeElectiveName,
-                        code: electiveInfo[electiveKey].code,
+                        code: electiveInfo[electiveKey] ? electiveInfo[electiveKey].code : "",
                         room: electiveDetails ? electiveDetails.room : "—",
                         prof: electiveDetails ? electiveDetails.prof : "—"
                     };
                 }
 
-                if (cellData) {
+                if (cellData && typeof cellData === 'object') {
                     const fullSubject = subjectFullNames[cellData.title] || cellData.title;
-                    const fullProf = getProfNames(cellData.prof);
+                    const fullProf = profFullNames[cellData.prof] || cellData.prof || "—";
                     headline.innerHTML = `🟢 NOW: ${fullSubject}`;
+                    subtext.innerText = `Room ${cellData.room || '—'} · ${fullProf} (${activeMatch.label})`;
 
-                    // ✨ Live Class Progress Tube Bar — fills 0→100% during active class
                     const progContainer = document.getElementById("live-progress-container");
                     const progFill = document.getElementById("live-progress-fill");
                     const progText = document.getElementById("live-progress-text");
@@ -6051,20 +6045,20 @@ function updateLiveClockEngine() {
                         progFill.style.width = pct + "%";
                         progText.innerText = `${pct}% Complete (${remainingMins}m left)`;
                     }
-                    subtext.innerText = `Room ${cellData.room || '—'} · ${fullProf} (${activeMatch.label.replace(/^0/, '')})`;
+
                     return;
                 } else {
                     headline.innerHTML = "📖 Free Study Slot";
-                    subtext.innerText = `No lecture scheduled for Group ${group} during this time slot (${activeMatch.label.replace(/^0/, '')}).`;
+                    subtext.innerText = `No lecture scheduled for Group ${group} during this time slot (${activeMatch.label}).`;
                     return;
                 }
             }
 
             headline.innerHTML = "⏱️ Passing Time / Between Slots";
             subtext.innerText = `Next slot starting soon for Division ${division} Group ${group}.`;
-        }
+}
 
-        // 1. Render Mobile Timeline Cards
+// 1. Render Mobile Timeline Cards
         function renderMobileCards() {
             const container = document.getElementById("mobile-cards-view");
             container.innerHTML = "";
