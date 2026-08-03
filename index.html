@@ -6000,9 +6000,12 @@ function updateLiveClockEngine() {
 
             // 3. Find active slot right now
             let activeMatch = null;
-            for (let range of timeRanges) {
+            let activeMatchIndex = -1;
+            for (let i = 0; i < timeRanges.length; i++) {
+                const range = timeRanges[i];
                 if (currentMinutes >= range.start && currentMinutes < range.end) {
                     activeMatch = range;
+                    activeMatchIndex = i;
                     break;
                 }
             }
@@ -6020,7 +6023,26 @@ function updateLiveClockEngine() {
                     return;
                 }
 
-                let cellData = activeSchedule[todayName] ? activeSchedule[todayName][activeMatch.slot] : null;
+                let cellData = daySched ? (daySched[activeMatch.slot] || daySched[activeMatch.slot.replace(/:/g, ".")] || daySched[activeMatch.slot.replace(/\./g, ":")]) : null;
+
+                // 🌟 Smart 2-Hour Lab Multi-Slot Merging Engine
+                let activeStart = activeMatch.start;
+                let activeEnd = activeMatch.end;
+                let activeLabel = activeMatch.label;
+
+                if (!cellData && daySched && activeMatchIndex > 0) {
+                    const prevRange = timeRanges[activeMatchIndex - 1];
+                    const prevCell = daySched[prevRange.slot] || daySched[prevRange.slot.replace(/:/g, ".")] || daySched[prevRange.slot.replace(/\./g, ":")];
+                    if (prevCell && typeof prevCell === 'object' && prevCell.isLab) {
+                        cellData = prevCell;
+                        activeStart = prevRange.start;
+                        activeLabel = `${prevRange.label.split('–')[0].trim()} – ${activeMatch.label.split('–')[1].trim()}`;
+                    }
+                } else if (cellData && typeof cellData === 'object' && cellData.isLab && activeMatchIndex + 1 < timeRanges.length) {
+                    const nextRange = timeRanges[activeMatchIndex + 1];
+                    activeEnd = nextRange.end;
+                    activeLabel = `${activeMatch.label.split('–')[0].trim()} – ${nextRange.label.split('–')[1].trim()}`;
+                }
 
                 if (cellData === "ELECTIVE") {
                     const electiveSchedKey = `${todayName}_${activeMatch.slot}`;
@@ -6043,15 +6065,15 @@ function updateLiveClockEngine() {
                     const progFill = document.getElementById("live-progress-fill");
                     const progText = document.getElementById("live-progress-text");
                     if (progContainer && progFill && progText) {
-                        const elapsed = currentMinutes - activeMatch.start;
-                        const totalDuration = activeMatch.end - activeMatch.start;
-                        const remainingMins = Math.max(0, activeMatch.end - currentMinutes);
+                        const elapsed = currentMinutes - activeStart;
+                        const totalDuration = activeEnd - activeStart;
+                        const remainingMins = Math.max(0, activeEnd - currentMinutes);
                         const pct = Math.min(100, Math.max(0, Math.round((elapsed / totalDuration) * 100)));
                         progContainer.style.display = "block";
                         progFill.style.width = pct + "%";
                         progText.innerText = `${pct}% Complete (${remainingMins}m left)`;
                     }
-                    subtext.innerText = `Room ${cellData.room || '—'} · ${fullProf} (${activeMatch.label.replace(/^0/, '')})`;
+                    subtext.innerText = `Room ${cellData.room || '—'} · ${fullProf} (${activeLabel.replace(/^0/, '')})`;
                     return;
                 } else {
                     headline.innerHTML = "📖 Free Study Slot";
